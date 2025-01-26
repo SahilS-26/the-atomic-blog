@@ -8,11 +8,6 @@ function createRandomPost() {
   };
 }
 
-const archiveOptions = {
-  show: false,
-  title: "Post archive in addition to main posts",
-};
-
 function App() {
   const [posts, setPosts] = useState(() =>
     Array.from({ length: 30 }, () => createRandomPost())
@@ -45,6 +40,11 @@ function App() {
     },
     [isFakeDark]
   );
+
+  const archiveOptions = {
+    show: false,
+    title: "Post archive in addition to main posts",
+  };
 
   return (
     <section>
